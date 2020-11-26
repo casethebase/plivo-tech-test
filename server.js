@@ -10,6 +10,10 @@ const base = new Airtable({
   apiKey:'keyYuf3wzo9M2rVP0'
 }).base('appuAsYf2d96dKX9i');
 
+let plivo = require('plivo');
+let client = new plivo.Client('MAMWU1M2FKMZCXMWUZOG','YjNlZTkzYTMxODE2MTcwNDk4OGRlOWFmMjczMGIy');
+
+
 // Cache the records in case we get a lot of traffic.
 // Otherwise, we'll hit Airtable's rate limit.
 var cacheTimeoutMs = 5 * 1000; // Cache for 5 seconds.
@@ -60,7 +64,7 @@ app.get("/history", function(request, response) {
     base("Pieces")
       .select({
         //this may need to get increased if people are submitting their work multiple times per day.
-        maxRecords: 60,
+        maxRecords: 900,
         sort: [{ field: "Date", direction: "asc" }],
         view: "Grid view"
       })

@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <title>Plivo Tech Test</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
     <meta name="description" content="Create a writing masterpiece" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -9,17 +12,29 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/public/style.css" />
   </head>
   <body>
     <main>
       <h1>
         Plivo Tech Test
       </h1>
+
+      <!-- Number you want to send to -->
       <form method="POST" action="/submit" class="story-form">
-   
+        <div class="form-row">
+          <label for="text">Number you want to send to</label>
+          <p>
+          <textarea type="text" name="text" id="text" required> </textarea>
+        </div>
+        <input type="submit" class="button" value="Set Number" />
+      </form>
+      <!-- Number you want to send to -->
+      <br>
+      <br>
+      <br>
+      <!-- Message you want to send -->
+      <form method="POST" action="/submit" class="story-form">
+  
         <div class="form-row">
           <label for="text">✍️ Write your text here: </label>
           <p>
@@ -27,6 +42,7 @@
         </div>
         <input type="submit" class="button" value="Send Text Message" />
       </form>
+      <!-- Message you want to send -->
     </main>
     <p>
       View Message <a href="/history">History.</a>
