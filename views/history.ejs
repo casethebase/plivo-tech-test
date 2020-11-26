@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SMS Text History</title>
+        <meta name="description" content="message history" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/public/style.css" />
+
+  </head>
+  <body>
+    <header>
+      <h1>
+        Message History
+      </h1>
+    </header>
+
+    <main>
+      <div id="story-container" class="story-container">
+      <!-- There's a placeholder line in the Airtable (for demo purposes), so this loop starts at the second row.  -->
+      <% for(var i=1; i < texts.length; i++) { %>
+        <p>
+           <%= texts[i].fields.Text %>
+        </p>
+      <% } %>
+
+      </div>
+    </main>
+  
+  </body>
+</html>
