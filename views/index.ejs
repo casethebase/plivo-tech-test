@@ -20,25 +20,22 @@
       </h1>
 
       <!-- Number you want to send to -->
-      <form method="POST" action="/submit" class="story-form">
-        <div class="form-row">
-          <label for="text">Number you want to send to</label>
-          <p>
-          <textarea type="text" name="text" id="text" required> </textarea>
-        </div>
-        <input type="submit" class="button" value="Set Number" />
-      </form>
+
       <!-- Number you want to send to -->
       <br>
       <br>
       <br>
       <!-- Message you want to send -->
-      <form method="POST" action="/submit" class="story-form">
+      <form method="POST" action="/submit" class="message-form">
   
         <div class="form-row">
           <label for="text">✍️ Write your text here: </label>
           <p>
           <textarea type="text" name="text" id="text" required> </textarea>
+          <br>
+          <br>
+          <label for="number">📱 Dial the number you'll be sending to: </label>
+          <input type="number" name="number" id="number" required> </input>
         </div>
         <input type="submit" class="button" value="Send Text Message" />
       </form>
